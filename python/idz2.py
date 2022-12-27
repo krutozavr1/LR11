@@ -6,12 +6,8 @@ import math
 import sys
 
 
-def cylinder():
+def cylinder(h, r, full_calculations):
     """ returns cylinder area(full or not)"""
-    h = int(input("Input height: "))
-    r = int(input("Input radius: "))
-    full_calculations = input("Do you want to know full calculations? Yes or No: ")
-
     if full_calculations.lower() == "yes":
         return 2 * math.pi * r * h + 2 * circle(r)
     else:
@@ -24,4 +20,8 @@ def circle(r):
 
 
 if __name__ == '__main__':
-    print(cylinder())
+    h = int(input("Input height: "))
+    r = int(input("Input radius: "))
+    full_calculations = input("Do you want to know full calculations? Yes or No: ")
+    
+    print(cylinder(h, r, full_calculations))

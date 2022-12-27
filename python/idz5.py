@@ -6,11 +6,8 @@ import sys
 from datetime import date
 
 
-def create_person():
+def create_person(name, sign, date):
     """ creates person variable with its fields"""
-    name = input("Фамилия и Имя? ")
-    sign = input("Знак зодиака? ")
-    date = input("Дата рождения? ")
     person = {
         'name': name,
         'sign': sign,
@@ -85,7 +82,10 @@ def main():
             break
 
         elif command == 'add':
-            persons.append(create_person())
+            name = input("Фамилия и Имя? ")
+            sign = input("Знак зодиака? ")
+            date = input("Дата рождения? ")
+            persons.append(create_person(name, sign, date))
 
             if len(persons) > 1:
                 persons.sort(key=lambda item: item.get('sign', ''))

@@ -5,10 +5,8 @@ import sys
 from datetime import date
 
 
-def test():
+def test(a):
     """ checks if variable positive or negative"""
-    a = int(input())
-
     if a < 0:
         negative()
     elif a > 0:
@@ -24,4 +22,6 @@ def negative():
 
 
 if __name__ == '__main__':
-    test()
+    a = int(input())
+    
+    test(a)
